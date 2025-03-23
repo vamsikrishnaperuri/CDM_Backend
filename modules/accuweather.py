@@ -8,7 +8,7 @@ def fetchWeatherUpdates(cities):
     baseUrl = "http://api.weatherapi.com/v1/alerts.json"
     alerts = []
     for city in cities:
-        params = {"key": "289f835a1251482fa16171457251102", "q": city}
+        
         response = requests.get(baseUrl, params=params)
         data = response.json()["alerts"]
         for weather_alert in alerts:

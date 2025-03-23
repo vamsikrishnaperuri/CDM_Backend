@@ -15,8 +15,8 @@ def generateAudio(mytext):
     return name
 
 def sendToS3Instance(file, bucket_name="gvp-bucket"):
-    access_key = "AKIAZOZQGABY2MYXJXHX"
-    secret_key = "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"
+    
+
     session = boto3.Session(
         aws_access_key_id=access_key,
         aws_secret_access_key=secret_key,
@@ -35,8 +35,8 @@ def call(text="Hello this is Harsha. Is this working"):
 
 def generateCall(audio_url, to_number="+919494517819"):
     print("Ready to call")
-    account_sid = "AC3288319555f57979acbceedd246af2b4"
-    auth_token = "a5d1ea27050e2841dc470268b0d576b2"
+    
+
     client = Client(account_sid, auth_token)
     call = client.calls.create(
         url=audio_url,
