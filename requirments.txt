@@ -1,0 +1,12 @@
+# Server
+fastapi
+uvicorn
+requests
+
+# Functionality
+apscheduler
+
+certbot
+gtts
+boto3
+twilio

@@ -1,0 +1,4 @@
+.idx
+.venv
+*.sh
+__pycache__
