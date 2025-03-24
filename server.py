@@ -26,7 +26,7 @@ async def fetchData(request: ClientRequest):
     if request.api_key is None or request.lat is None or request.lng is None:
         pass
     else:
-        if request.api_key == "ker234kj4kj34j234":
+        if request.api_key == "REQ_KEY":
             print("Recieved Request")
             from helper import fetchData
             response_data = fetchData(request.lat, request.lng)

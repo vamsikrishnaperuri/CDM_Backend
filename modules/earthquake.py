@@ -124,6 +124,6 @@ def updateEarthquakeAlerts(cities):
                     disaster = disaster)
                 alerts.append(alert)
     
-    from dataproc import updateDataStore
+    from modules.dataproc import updateDataStore
     updateDataStore(alerts)
 

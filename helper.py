@@ -33,7 +33,7 @@ def readFile(file_path):
         return None
 
 def cityToCoordinates(cityname):
-    apikey = "pk.02b5994cb8a776ef80fd220a5ebd8be4"  # Api key for location iq
+    apikey = "API_KEY_CITY_TO_CORD"  # Api key for location iq
     base_url = r"https://us1.locationiq.com/v1/search"
     params = {'key': apikey, 'q': cityname, 'format': 'json'}
     coordinates = None
@@ -56,7 +56,7 @@ def cityToCoordinates(cityname):
         return coordinates
 
 def coordinatesToCity(lat, lng):
-    apikey = "bdc_43e7339ecac34660a139e16f7073a6ce"  # bigdata-api
+    apikey = "API_KEY_CORD_TO_CITY"  # bigdata-api
     base_url = r"https://api-bdc.net/data/reverse-geocode"
     params = {'latitude': lat, 'longitude': lng, 'localityLanguage': 'en', 'key': apikey}
     city = None

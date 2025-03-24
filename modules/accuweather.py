@@ -8,7 +8,7 @@ def fetchWeatherUpdates(cities):
     baseUrl = "http://api.weatherapi.com/v1/alerts.json"
     alerts = []
     for city in cities:
-        
+        params = {"key": "ENTER_YOUR_HERE", "q": city}
         response = requests.get(baseUrl, params=params)
         data = response.json()["alerts"]
         for weather_alert in alerts:
@@ -16,7 +16,7 @@ def fetchWeatherUpdates(cities):
             alerts.append(alert)
     
 
-    from dataproc import updateDataStore
+    from modules.dataproc import updateDataStore
     updateDataStore(alerts)
 
 def updateWeatherUpdates():
